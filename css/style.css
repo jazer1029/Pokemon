@@ -1,0 +1,299 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #202020;
+  height: 100vh;
+  background: url("https://moewalls.com/wp-content/uploads/2023/02/pokemon-emerald-waterfall-pixel-thumb.jpg")
+    no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s;
+}
+
+body::-webkit-scrollbar {
+  background: #202020;
+  width: 0.6rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #f2f2f2;
+  border-radius: 0.4rem;
+}
+
+main {
+  padding: 4rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: #ffff;
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+.rojo {
+  color: rgb(232, 74, 74);
+}
+
+header nav input {
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  padding: 0.6rem 1rem;
+  width: 100%;
+}
+
+.sectionList {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 626px) {
+  main {
+    padding: 2rem 4rem;
+  }
+
+  header {
+    flex-direction: row;
+  }
+
+  header nav {
+    width: calc(100% / 3);
+  }
+
+  .sectionList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 968px) {
+  main {
+    padding: 2rem 8rem;
+  }
+
+  header {
+    flex-direction: row;
+  }
+
+  header nav {
+    width: calc(100% / 3);
+  }
+
+  .sectionList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1246px) {
+  main {
+    padding: 2rem 12rem;
+  }
+
+  header {
+    flex-direction: row;
+  }
+
+  header nav {
+    width: calc(100% / 3);
+  }
+
+  .sectionList {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.artPoke {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* background: url("https://c.wallhere.com/photos/39/8b/Pok_mon_Pok_Balls_artwork-1368481.jpg!d"); */
+  background-color: rgb(48, 48, 48, 0.9);
+  color: #f2f2f2;
+  border: 2px solid #404040;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+}
+
+.artPoke:hover {
+  background: #f2f2f2;
+  color: #303030;
+  cursor: pointer;
+}
+
+.artPoke img {
+  width: 8rem;
+}
+
+.artPoke h2 {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+dialog {
+  margin: auto;
+  border: none;
+  border-radius: 0.4rem;
+  outline: none;
+  scale: 0;
+  transition: 0.2s;
+  box-shadow: 0 0 4rem #000;
+}
+
+dialog .cardPoke {
+  padding: 1.6rem;
+  display: flex;
+  gap: 2rem;
+  background-size: cover;
+}
+
+.cardPoke .imgAndTypes {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.imgAndTypes img {
+  width: 18rem;
+  /* border: 2px solid #404040cc; */
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.imgAndTypes .Types {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Types span {
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  border: 2px solid #404040cc;
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  font-weight: bold;
+}
+
+.infAndStats {
+  display: flex;
+  flex-direction: column;
+  gap: 2.1rem;
+}
+
+.infAndStats .inf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.2rem;
+  gap: 2rem;
+}
+
+.inf h2,
+.inf span {
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  -webkit-text-stroke: #f2f2f2 1px;
+}
+
+.stats {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+  border: 2px solid#404040cc;
+  border-radius: 0.4rem;
+  list-style: none;
+  background: #f2f2f275;
+}
+
+.stats li {
+  font-size: 1.2rem;
+}
+
+.stats li span {
+  font-weight: 500;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.btnsChange {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btnsChange button {
+  font-size: 3rem;
+  line-height: 2.55rem;
+  padding: 0 1rem;
+  outline: none;
+  background: #f2f2f275;
+  border: 2px solid#404040cc;
+  border-radius: 0.4rem;
+  font-weight: bolder;
+  transition: 0.2s;
+}
+
+.btnsChange button:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.buscador {
+  font-size: 1rem;
+}
+
+.sectionShowMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionShowMore button {
+  padding: 0.8rem;
+  font-weight: 500;
+  color: #f2f2f2;
+  background: #303030;
+  border: 2px solid #f2f2f2;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.sectionShowMore button:hover {
+  background: #f2f2f2;
+  color: #303030;
+  cursor: pointer;
+}
+
+.error404 {
+  padding: 3rem;
+  text-align: center;
+  font-size: 70px;
+  color: #f2f2f2;
+  font-weight: bolder;
+}
